@@ -71,7 +71,7 @@ export default class UserCrud extends Component {
             <Main {...headerProps} >
                 <RenderForm user={this.state.user} save={this.save.bind(this)} clear={this.clear.bind(this)}
                     updateField={this.updateField.bind(this)} />
-                <RenderTable list={list} load={this.load} remove={this.remove.bind(this)} />
+                <RenderTable list={list} load={this.load.bind(this)} remove={this.remove.bind(this)} />
             </Main>
         )
     }
