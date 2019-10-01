@@ -3,15 +3,16 @@ import React from 'react';
 import UserCrud from './UserCrud';
 
 export default class RenderTable extends React.Component {
-    
 
-    render(){
+
+    render() {
         return (
             <React.Fragment>
                 {this.renderTable()}
             </React.Fragment>
         )
     }
+
     renderTable() {
         console.log(this.props)
         return (
@@ -40,11 +41,11 @@ export default class RenderTable extends React.Component {
                     <td>{user.email}</td>
                     <td>
                         <button className="btn btn-warning"
-                            onClick={() => UserCrud.load(user)}>
+                            onClick={() => this.props.load(user)}>
                             <i className="fa fa-pencil"></i>
                         </button>
                         <button className="btn btn-danger ml-2"
-                            onClick={() => this.remove(user)}>
+                            onClick={() => this.props.remove(user)}>
                             <i className="fa fa-trash"></i>
                         </button>
                     </td>
